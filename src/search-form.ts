@@ -7,33 +7,20 @@ export function renderSearchFormBlock(
   const arrivalDay = arrivalDate.getDate();
   const arrivalMonth = arrivalDate.getMonth() + 1;
   const arrivalYear = arrivalDate.getFullYear();
-  console.log('День заезда "по умолчанию": ' + arrivalDay);
-  console.log('Месяц заезда "по умолчанию": ' + arrivalMonth);
-  console.log('Год заезда "по умолчанию": ' + arrivalYear);
   // Добавляем новую дату для поля "Дата выезда" по умолчанию и извлекаем из нее даты
   const departureDay = departureDate.getDate();
   const departureMonth = departureDate.getMonth() + 1;
   const departureYear = departureDate.getFullYear();
-  console.log('День выезда "по умолчанию": ' + departureDay);
-  console.log('Месяц выезда "по умолчанию": ' + departureMonth);
-  console.log('Год выезда "по умолчанию": ' + departureYear);
   // Минимальная дата для выбора
   const minDateForChoice = new Date();
   const minDateDay = minDateForChoice.getDate();
   const minDateMonth = minDateForChoice.getMonth() + 1;
   const minDateYear = minDateForChoice.getFullYear();  
-  console.log('Минимальный день для выбора: ' + departureDay);
-  console.log('Минимальный месяц для выбора: ' + departureMonth);
-  console.log('Минимальный год для выбора: ' + departureYear);
   // Максимальная дата для выбора
   const maxDateForChoice = new Date(minDateYear, minDateMonth + 1, 0);
-  console.log('Последнее число следующего месяца: ' + maxDateForChoice);
   const maxDateDay = maxDateForChoice.getDate();
   const maxDateMonth = maxDateForChoice.getMonth() + 1;
   const maxDateYear = maxDateForChoice.getFullYear();
-  console.log('Максимальный день для выбора: ' + maxDateDay);
-  console.log('Максимальный месяц для выбора: ' + maxDateMonth);
-  console.log('Максимальный год для выбора: ' + maxDateYear);
   // Рендер
   renderBlock('search-form-block', `
     <form>
