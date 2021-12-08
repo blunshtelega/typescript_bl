@@ -1,4 +1,4 @@
-import { User } from './models/user.js';
+import { User } from './models/user.js'
 
 export function saveUserDataInLocalStorage(
   userName: string,
@@ -63,33 +63,3 @@ export function renderToast (message, action) {
     }
   }
 }
-
-// function tryDeserializeLocalStorageItem(key: string): Result {
-//   const item = localStorage.getItem(key);
-
-//   if (item === null) {
-//     // The item does not exist, thus return an error result
-//     return {
-//       success: false,
-//       error: new Error(`Item with key "${key}" does not exist`),
-//     };
-//   }
-
-//   let value: unknown;
-
-//   try {
-//     value = JSON.parse(item);
-//   } catch (error) {
-//     // The item is not valid JSON, thus return an error result
-//     return {
-//       success: false,
-//       error,
-//     };
-//   }
-
-//   // Everything's fine, thus return a success result
-//   return {
-//     success: true,
-//     value,
-//   };
-// }
