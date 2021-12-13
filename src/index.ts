@@ -6,7 +6,7 @@ import { getUserData, renderToast, saveUserDataInLocalStorage} from './lib.js'
 window.addEventListener('DOMContentLoaded', () => {
 
   saveUserDataInLocalStorage('Pavel','./img/avatar.png');
-  let userData: unknown;
+  const userData: object = [];
   const user = getUserData(userData);
   renderUserBlock(user.username, user.avatarUrl, 3)
 

@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    // здесь будут опции строгости
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "strictFunctionTypes": true
+  }
+}

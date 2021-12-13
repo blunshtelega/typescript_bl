@@ -5,7 +5,10 @@
     "module": "es2015",
     "moduleResolution": "node"
   },
+  "extends": "./tsconfig-checks.json",
   "files": [
     "src/index.ts"
   ]
 }
+
+

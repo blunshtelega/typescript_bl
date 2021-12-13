@@ -64,7 +64,7 @@ export function renderSearchFormBlock(
     console.log(value)
   }  
     
-  const form = document.getElementById('searchForm')
+  const form = document.getElementById('searchForm') as HTMLElement; 
   const city = document.getElementById('city') as HTMLInputElement;
   const dateIn = document.getElementById('check-in-date') as HTMLInputElement;
   const dateOut = document.getElementById('check-out-date') as HTMLInputElement;

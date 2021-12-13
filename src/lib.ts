@@ -10,8 +10,8 @@ export function saveUserDataInLocalStorage(
   );
 }
 
-export function getUserData(userData: unknown): User {
-  const rawUserData = localStorage.getItem('user');
+export function getUserData(userData: object): User {
+  const rawUserData: any = localStorage.getItem('user');
   if (rawUserData) {
     userData = JSON.parse(rawUserData);
   }
@@ -31,12 +31,12 @@ export function getFavoritesAmount(): number {
   return JSON.parse(favoritesAmount);
 }
 
-export function renderBlock (elementId, html) {
-  const element = document.getElementById(elementId)
+export function renderBlock (elementId: string, html: any) {
+  const element: any = document.getElementById(elementId)
   element.innerHTML = html
 }
 
-export function renderToast (message, action) {
+export function renderToast (message: any, action: any) {
   let messageText = ''
   
   if (message != null) {
