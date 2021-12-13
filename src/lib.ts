@@ -31,7 +31,7 @@ export function getFavoritesAmount(): number {
   return JSON.parse(favoritesAmount);
 }
 
-export function renderBlock (elementId: string, html: any) {
+export function renderBlock (elementId: string, html: string) {
   const element: any = document.getElementById(elementId)
   element.innerHTML = html
 }
@@ -61,5 +61,32 @@ export function renderToast (message: any, action: any) {
       }
       renderToast(null, action)
     }
+  }
+}
+
+export interface ITodos {
+  userId: number,
+  id: number,
+  title: string,
+  completed: boolean
+}
+
+export function getTodosByCount(count: number): void {
+
+  for (let i = 1; i <= count; i++) {
+    fetch(`https://jsonplaceholder.typicode.com/todos/${i}`)
+      .then<ITodos>(response => response.json())
+      .then(json => {
+        if (
+          typeof json.userId === 'number'
+          && typeof json.id === 'number'
+          && typeof json.title === 'string'
+          && typeof json.completed === 'boolean'
+        ) {
+          console.log(json)
+        }
+      }).catch((error) => {
+        console.error(error)
+      })
   }
 }
