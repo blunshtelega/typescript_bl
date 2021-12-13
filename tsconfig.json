@@ -3,12 +3,16 @@
     "outDir": "public/scripts",
     "target": "es2015",
     "module": "es2015",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "allowJs": true
   },
   "extends": "./tsconfig-checks.json",
-  "files": [
-    "src/index.ts"
+  "include": [
+    "src/**/*"
   ]
+  // "files": [
+  //   "src/index.ts"
+  // ]
 }
 
 
